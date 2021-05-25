@@ -5,7 +5,7 @@ const assertEqual = function(actual, expected) {
         console.log(`Assertion Failed: ${actual} !== ${expected}`);
 };
 
-const tail = function(arr) {
+/*const tail = function(arr) {
     let tailArray = [];
     let j = 0;
 
@@ -14,7 +14,10 @@ const tail = function(arr) {
         j++;
     }
     return tailArray;
-};
+};*/
+
+const tail = array => array.slice(1);
+
 
 // TEST CODE
 const result = tail(["Hello", "Lighthouse", "Labs"]);
