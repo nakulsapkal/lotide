@@ -1,7 +1,7 @@
 const eqArrays = function(arrList1, arrList2) {
     let assertResult = true;
 
-    if (arrList1.length !== arrList2.length)
+    if (arrList1 === undefined || arrList2 === undefined || arrList1.length !== arrList2.length)
         return false;
 
     for (let i = 0; i < arrList1.length; i++) {
@@ -12,12 +12,13 @@ const eqArrays = function(arrList1, arrList2) {
 }
 
 
-const assertArraysEqual = function(arrayList1, arrayList2) {
-    if (eqArrays(arrayList1, arrayList2))
-        console.log("Assertion Passed: ", arrayList1, " === ", arrayList2);
+const assertArraysEqual = function(actual, expected) {
+    if (actual === expected)
+        console.log("Assertion Passed: ", actual, " === ", expected);
     else
-        console.log("Assertion Failed: ", arrayList1, " !== ", arrayList2);
+        console.log("Assertion Failed: ", actual, " !== ", expected);
 }
+
 
 
 
@@ -40,10 +41,7 @@ const without = function(sourceArray, itemToRemove) {
 }
 
 
-
-let words = ["hello", "world", "lighthouse"];
-assertArraysEqual(without(words, ["world"]), ["hello", "lighthouse"]);
-words = ["hello", "world", "lighthouse"];
-assertArraysEqual(without(words, ["lighthouse"]), ["hello", "world", "lighthouse"]);
-assertArraysEqual(without([1, 2, 3], [2]), [1, 3]);
-assertArraysEqual(without([1, 2, 3], [1]), [1, 2, 3]);
+assertArraysEqual(eqArrays(without([1], [1]), without([1], [1])), true);
+assertArraysEqual(eqArrays(without([1, 2, 3], [1]), without([3, 2, 3], [1])), false);
+assertArraysEqual(eqArrays(without([1, 2, 3], [1]), without([1, 2, 3, 1, 1], [1])), true);
+assertArraysEqual(eqArrays(without(["hello", "world", "lighthouse"], ["world"]), without(["hello", "people", "lighthouse"], ["people"])), true);
