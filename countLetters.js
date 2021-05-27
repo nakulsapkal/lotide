@@ -49,7 +49,6 @@ const countLetters = function(sentence) {
 }
 
 const result1 = countLetters('Create a function called countLetters');
-console.log(result1);
 
 assertEqual(result1["C"], 1);
 assertEqual(result1[" "], 4);
