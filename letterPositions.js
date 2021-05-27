@@ -61,3 +61,4 @@ assertArraysEqual(eqArrays(result1["u"], [7, 20]), true);
 assertArraysEqual(eqArrays(result1["s"], [8, 21]), true);
 assertArraysEqual(eqArrays(result1["e"], [9, 16, 22]), true);
 assertArraysEqual(eqArrays(result1["n"], [12]), true);
+assertArraysEqual(eqArrays(result1[" "], [10, 13, 17]), true);
