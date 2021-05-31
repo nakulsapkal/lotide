@@ -1,3 +1,7 @@
+const assertEqual = require('../assertEqual');
+const findKey = require('../findKey');
+
+
 const bestTVShowsByGenre = {
   sci_fi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
