@@ -11,15 +11,15 @@ const without = require('./without');
 const takeUntil = require('./takeUntil');
 
 module.exports = {
-  head: head,
-  tail: tail,
-  middle: middle,
-  countLetters: countLetters,
-  findKeyByValue: findKeyByValue,
-  findKey: findKey,
-  letterPositions: letterPositions,
-  map: map,
-  without: middle,
-  takeUntil: takeUntil,
-  countOnly: countOnly
+  head,
+  tail,
+  middle,
+  countLetters,
+  findKeyByValue,
+  findKey,
+  letterPositions,
+  map,
+  without,
+  takeUntil,
+  countOnly
 };
